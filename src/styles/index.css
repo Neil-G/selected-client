@@ -1,0 +1,150 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* GLOBAL */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* Text inputs */
+input:not([type='file']),
+textarea {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 4px 10px;
+}
+textarea {
+  min-height: 90px;
+}
+
+input {
+  height: 36px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* transition: background 0.4s, color 0.4s; */
+}
+
+button:focus {
+  outline: none;
+}
+
+button.primary {
+  color: white;
+  background: #f48022;
+}
+
+button.primary:hover {
+  background: #de751f;
+}
+
+button.primary-alt {
+  background: none;
+  border: 1px solid #f48022;
+  color: #333;
+}
+
+button.primary-alt:hover {
+  background: #de751f;
+  color: white;
+}
+
+button.secondary {
+}
+
+button.blend {
+  background: none;
+}
+
+button.blend {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid #f3f3f3;
+}
+
+button.blend:hover {
+  background: #fff;
+  border: 1px solid #bbb;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1),
+    0 1px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+/* REACT MODAL */
+.ReactModal__Overlay--after-open {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* REACT TABS */
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 0 0px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 3px 6px -1px #ececec;
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
