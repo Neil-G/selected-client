@@ -74,3 +74,5 @@ export const getResetFilterSettings = () => {
   })
   return filterSettings
 }
+
+export default multiSelectSettings

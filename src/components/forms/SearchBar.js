@@ -334,10 +334,10 @@ export default class SearchBar extends React.Component {
         {selectedOptions.length > 0 && (
           <ClearFiltersText>
             <span
-            // onClick={() => {
-            //   this.setState({ inputValue: '' })
-            //   updater.unselectAllFilterOptions({ pageName })
-            // }}
+              onClick={() => {
+                this.setState({ inputValue: '' })
+                updater.unselectAllFilterOptions({ appName, pageName })
+              }}
             >
               clear all filters
             </span>
