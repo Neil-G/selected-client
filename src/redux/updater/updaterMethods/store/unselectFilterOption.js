@@ -7,7 +7,7 @@ export default ({ pageName, value, filterName, isMulti = true }) => {
     actions: [
       {
         name: 'unselectFilterOption',
-        type: 'update_pages',
+        type: 'employerPages',
         description: `unselecting ${value} in ${filterName} filter on ${pageName} page`,
         updateFunction: ({}, state) => {
           const page = { ...state[pageName] }
@@ -24,7 +24,9 @@ export default ({ pageName, value, filterName, isMulti = true }) => {
             updatedPage = set(
               page,
               `applicationsFilter.settings.${filterName}.selectedOption`,
-              undefined
+              page.applicationsFilter.settings[
+                filterName
+              ].selectedOptions.filter(option => option.value !== value)
             )
           }
 
