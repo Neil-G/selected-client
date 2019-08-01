@@ -309,7 +309,6 @@ export default class SearchBar extends React.Component {
           <TagsContainer>
             {selectedOptions
               .sort((a, b) => {
-                console.log(selectedOptions)
                 return String(a.label).localeCompare(String(b.label))
               })
               .map(({ filterName, label, tagLabel, isMulti, value }) => (
@@ -317,9 +316,8 @@ export default class SearchBar extends React.Component {
                   {tagLabel || label}
                   <FontAwesomeIcon
                     onClick={() => {
-                      console.log('filterName:', filterName)
                       return updater.unselectFilterOption({
-                        pageName, //employerPages
+                        pageName,
                         value,
                         filterName,
                         isMulti,
