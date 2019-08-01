@@ -47,9 +47,9 @@ export const multiSelectSettings = [
       value: label,
     })),
   },
-].map(({ filterName }) => {
-  setting.options.map(option => {
-    option.filterName = setting.filterName
+].map(setting => {
+  const { filterName, options } = setting
+  setting.options = options.map(option => {
     return { ...option, filterName }
   })
   return setting
