@@ -48,9 +48,9 @@ export const multiSelectSettings = [
     })),
   },
 ].map(setting => {
-  setting.options.map(option => {
+  setting.options.map(({ filterName }) => {
     option.filterName = setting.filterName
-    return option
+    return { ...option, filterName }
   })
   return setting
 })
