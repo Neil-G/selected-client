@@ -47,7 +47,13 @@ export const multiSelectSettings = [
       value: label,
     })),
   },
-]
+].map(setting => {
+  const { filterName, options } = setting
+  setting.options = options.map(option => {
+    return { ...option, filterName }
+  })
+  return setting
+})
 
 export const singleSelectOptions = [
   'textSearch',
