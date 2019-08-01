@@ -1,2 +1,7 @@
-export { default as GreenhouseButton } from './GreenhouseButton'
-export { default as MessageThreadLinkButton } from './MessageThreadLinkButton'
+import GreenhouseButton from './GreenhouseButton'
+import MessageThreadLinkButton from './MessageThreadLinkButton'
+
+export default {
+  GreenhouseButton,
+  MessageThreadLinkButton,
+}

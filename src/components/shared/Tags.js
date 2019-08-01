@@ -73,3 +73,5 @@ export const TagsContainer = ({
     </StyledTagsContainer>
   )
 }
+
+export default TagsContainer
